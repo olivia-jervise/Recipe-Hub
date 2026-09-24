@@ -9,11 +9,11 @@ always lives on in the template repo — you lose nothing by replacing it.
 Everything not in <angle brackets> is already true of this codebase; keep it.
 -->
 
-# <Project name>
+# Recipe Hub
 
-<One sentence: what this app does and for whom. Not the tech — the point.>
+Recipe Hub helps home cooks and food lovers turn social media recipe links into organized, personalized collections with ingredients, nutritional values, instructions, equipment, and everything else you'd want from a recipe.
 
-**Live:** <https://your-app.azurecontainerapps.io — or "not deployed yet">
+**Live:** not deployed yet
 
 <!-- Optional but recommended: one screenshot or GIF of the thing working.
      A README with a picture gets read; a wall of text gets skimmed. -->
@@ -43,8 +43,7 @@ pre-push set (`pnpm test && pnpm typecheck && pnpm build`).
 
 ## How it's built
 
-<Two or three sentences: the shape of your app in your words — what the web
-app does, what the worker does, what's in the database. Not a tour; a gist.>
+The web app lets users save, browse, and organize recipe collections from imported links, while the background worker parses recipe content, extracts ingredients and steps, and keeps data fresh. The database stores users, recipes, ingredients, nutrition details, instructions, equipment, tags, and saved collections so everything can be searched, organized, and revisited in one place.
 
 The deeper story lives in the docs, organized by the question you're asking —
 decisions in [`docs/adr/`](docs/adr/), behavior in [`docs/specs/`](docs/specs/),
@@ -55,8 +54,9 @@ history in [`docs/postmortems/`](docs/postmortems/), procedures in
 
 <!-- Who builds this. Link GitHubs. Your team charter has the roles. -->
 
-- <Name> — <@github>
-- <Name> — <@github>
+- Olivia Jervise — @olivia-jervise
+- Alyssa Johnson — @alyssajodi2005
+- Nathan Jaywin Chin - @NathanASC25
 
 ## Contributing
 
