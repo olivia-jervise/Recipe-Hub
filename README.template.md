@@ -23,7 +23,7 @@ Recipe Hub helps home cooks and food lovers turn social media recipe links into 
 <!-- One line per shipped feature, linking its spec — the spec is the full
      story, this list is the menu. Grows as features land. -->
 
-- Import a recipe from a social media link and turn it into a structured recipe ([spec](docs/specs/<domain>/<feature>.md))
+- Import recipe links from social media and turn them into organized, structured recipes ([spec](docs/specs/<domain>/<feature>.md))
 - <Feature> ([spec](docs/specs/<domain>/<feature>.md))
 
 ## Run it locally
