@@ -25,14 +25,14 @@ repo by the Week-4 session · revisit at midterm. Worked example: [charter-examp
 ### Roles & responsibilities
 
 **Rotating roles (who has it this week is posted in the channel):**
-____________ *(e.g., stand-up lead runs the meeting + posts notes; review
-captain is first responder on every PR; demo owner keeps `main` deployable)*
+stand-up lead runs the meeting + posts notes; review
+captain is first responder on every PR; demo owner keeps `main` deployable
 
-**Standing ownership:** ____________ *(e.g., each member is first stop for
-their jigsaw aspect — first stop, not sole owner)*
+**Standing ownership:** each member is first stop for
+their jigsaw aspect — first stop, not sole owner
 
-**Everyone, every week:** ____________ *(e.g., one merged PR, one review
-given, stand-up attended or an async update posted before it starts)*
+**Everyone, every week:** one merged PR, one review
+given, stand-up attended or an async update posted before it starts
 
 ## 2 · The Product
 
