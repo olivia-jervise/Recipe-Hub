@@ -14,37 +14,45 @@ datasource db {
 }
 
 model User {
-  id        String  @id
+  id        String  @id @default(cuid())
   username  String
   cookbooks Cookbook[]
   recipes   Recipe[]
 }
 
 model Cookbook {
-  id        String  @id
+  id        String  @id @default(cuid())
   name      String
+  userId    String
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model Recipe {
-  id            String  @id
+  id            String  @id @default(cuid())
   name          String
   servings      Int
   instructions  String[]
+  userId        String
+  user          User[]       @relation(fields: [userId], references: [id], onDelete: Cascade)
   ingredients   Ingredient[]
   components    Component[]
   equipment     Equipment[]
 }
 
 model Component {
-  id      String  @id
-  name    String
+  id        String  @id @default(cuid())
+  name      String
+  recipeId  String
+  recipe    Recipe  @relation(fields: [recipeId], references: [id], onDelete: Cascade)
 }
 
 model Equipment {
-  id        String @id
+  id        String @id @default(cuid())
   name      String
   settings  String?
   optional  Boolean
+  recipeId  String
+  recipe    Recipe[]       @relation(fields: [recipeId], references: [id], onDelete: Cascade)
 }
 
 enum Unit {
@@ -69,7 +77,7 @@ enum Unit {
 }
 
 model Ingredient {
-  id            String  @id
+  id            String  @id @default(cuid())
   name          String
   amount        Float
   unit          Unit  @default(NONE)
@@ -78,4 +86,6 @@ model Ingredient {
   protein       Float
   fats          Float
   optional      Boolean  
+  recipeId      String
+  recipe        Recipe[]       @relation(fields: [recipeId], references: [id], onDelete: Cascade)
 }
