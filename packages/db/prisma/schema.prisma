@@ -33,7 +33,7 @@ model Recipe {
   servings      Int
   instructions  String[]
   userId        String
-  user          User[]       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user          User[]
   ingredients   Ingredient[]
   components    Component[]
   equipment     Equipment[]
@@ -52,7 +52,7 @@ model Equipment {
   settings  String?
   optional  Boolean
   recipeId  String
-  recipe    Recipe[]       @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+  recipe    Recipe[]
 }
 
 enum Unit {
@@ -87,5 +87,5 @@ model Ingredient {
   fats          Float
   optional      Boolean  
   recipeId      String
-  recipe        Recipe[]       @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+  recipe        Recipe[]
 }
