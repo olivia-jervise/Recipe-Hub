@@ -32,7 +32,6 @@ model Recipe {
   name          String
   servings      Int
   instructions  String[]
-  userId        String
   user          User[]
   ingredients   Ingredient[]
   components    Component[]
@@ -51,7 +50,6 @@ model Equipment {
   name      String
   settings  String?
   optional  Boolean
-  recipeId  String
   recipe    Recipe[]
 }
 
@@ -86,6 +84,5 @@ model Ingredient {
   protein       Float
   fats          Float
   optional      Boolean  
-  recipeId      String
   recipe        Recipe[]
 }
