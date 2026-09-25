@@ -12,3 +12,70 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id        String  @id
+  username  String
+  cookbooks Cookbook[]
+  recipes   Recipe[]
+}
+
+model Cookbook {
+  id        String  @id
+  name      String
+}
+
+model Recipe {
+  id            String  @id
+  name          String
+  servings      Int
+  instructions  String[]
+  ingredients   Ingredient[]
+  components    Component[]
+  equipment     Equipment[]
+}
+
+model Component {
+  id      String  @id
+  name    String
+}
+
+model Equipment {
+  id        String @id
+  name      String
+  settings  String?
+  optional  Boolean
+}
+
+enum Unit {
+  TEASPOON 
+  TABLESPOON 
+  CUP 
+  FLUID_OUNCE 
+  OUNCE 
+  POUND 
+  GRAM 
+  KILOGRAM 
+  MILLILITER 
+  LITER 
+  PIECE 
+  CLOVE 
+  SLICE 
+  CAN 
+  PACKAGE 
+  PINCH 
+  DASH 
+  NONE
+}
+
+model Ingredient {
+  id            String  @id
+  name          String
+  amount        Float
+  unit          Unit  @default(NONE)
+  calories      Float
+  carbohydrates Float
+  protein       Float
+  fats          Float
+  optional      Boolean  
+}
