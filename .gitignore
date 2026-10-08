@@ -12,3 +12,6 @@ packages/db/src/generated/
 dist/
 .turbo
 .DS_Store
+
+recipe_result.json
+recipe_raw_output.txt
