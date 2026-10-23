@@ -25,7 +25,7 @@ type Recipe = {
   ingredients?: Ingredient[];
   instructions?: Instruction[];
   equipment?: string[];
-  dietary_tags?: string[];
+  dietary_tags?: string[] | string;
   missing_information?: string[] | string | null;
 };
 
